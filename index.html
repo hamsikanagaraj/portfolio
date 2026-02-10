@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamsika Nagaraj | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #0f172a, #1e293b);
+            color: #f1f5f9;
+            overflow-x: hidden;
+        }
+
+        /* ===== BACKGROUND ANIMATION ===== */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(56,189,248,0.08) 0px,
+                    rgba(56,189,248,0.08) 1px,
+                    transparent 1px,
+                    transparent 80px
+                );
+            animation: moveBg 6s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveBg {
+            from { transform: translateX(0); }
+            to { transform: translateX(-80px); }
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        /* ===== PROFILE IMAGE ===== */
+        .profile-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            cursor: pointer;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .profile-container img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px #38bdf8;
+        }
+
+        /* Hide file input completely */
+        #profileUpload {
+            display: none;
+        }
+
+        header h1 {
+            font-size: 38px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: #94a3b8;
+            margin-top: 10px;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f1f5f9;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 60px 10%;
+        }
+
+        h2 {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #38bdf8;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .box {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: translateY(-8px);
+            background: #334155;
+        }
+
+        .box h3 {
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0f172a;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <!-- Profile Picture -->
+    <div class="profile-container">
+        <label for="profileUpload">
+            <img id="profilePic" src="https://via.placeholder.com/150" alt="Profile Picture">
+        </label>
+        <input type="file" id="profileUpload" accept="image/*">
+    </div>
+
+    <h1>Hamsika Nagaraj</h1>
+    <p>Aspiring Software Developer | Engineering Student</p>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a dedicated engineering student with a strong passion for software development and problem solving. 
+        I strive to build efficient, scalable, and innovative solutions through continuous learning and practical experience. 
+        My goal is to contribute meaningfully to technology-driven environments.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+        <div class="box">
+            <h3>Java</h3>
+            <p>Object-Oriented Programming & Application Development</p>
+        </div>
+
+        <div class="box">
+            <h3>Python</h3>
+            <p>Problem Solving & Automation Scripting</p>
+        </div>
+
+        <div class="box">
+            <h3>SQL</h3>
+            <p>Database Management & Query Optimization</p>
+        </div>
+
+        <div class="box">
+            <h3>Web Development</h3>
+            <p>HTML, CSS & JavaScript Front-End Development</p>
+        </div>
+
+        <div class="box">
+            <h3>Data Structures</h3>
+            <p>Fundamentals of Algorithms & Logical Thinking</p>
+        </div>
+    </div>
+</section>
+
+<section id="certificates">
+    <h2>Certifications & Achievements</h2>
+    <div class="grid">
+        <div class="box">
+            <h3>Course Era</h3>
+            <p>Completed certified technical coursework on OPERATIONAL RESEARCH.</p>
+        </div>
+        
+        <div class="box">
+            <h3>Course Era</h3>
+            <p>Completed certified technical coursework on FUNDAMENTALS OF MANAGEMENT.</p>       
+        </div>
+
+        <div class="box">
+            <h3>Poster Presentation</h3>
+            <p>Presented academic research in institutional event in Dept of COMPUTER SCIENCE & BUSINESS SYSTEM.</p>
+        </div>
+
+        <div class="box">
+            <h3>Hackathon</h3>
+            <p>Participated in collaborative problem-solving competition in MAHARAJA INSTITUION OF TECHNOLOGY,MYSORE.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: hamsikanagaraj2005@gmail.com</p>
+    <p>LinkedIn: linkedin.com/in/hamsikanagaraj</p>
+    <p>GitHub: github.com/hamsikanagaraj</p>
+</section>
+
+<footer>
+    © 2026 Hamsika Nagaraj | All Rights Reserved
+</footer>
+
+<script>
+    const upload = document.getElementById("profileUpload");
+    const profilePic = document.getElementById("profilePic");
+
+    upload.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+            profilePic.src = URL.createObjectURL(file);
+        }
+    });
+</script>
+
+</body>
+</html>
